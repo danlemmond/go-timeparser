@@ -1,9 +1,10 @@
-package timeparser
+package main
 
 import (
     "fmt"
-    "time"
+    //"time"
 	"regexp"
+	"strings"
 )
 
 type parseTimeStruct struct {
@@ -116,15 +117,19 @@ var fillwords = map[string]byte {
 	"in": '+',
 }
 
-func parseTime(s string, n string) {
-	var re, lang, encoded, timedif, unit, word, hhmmss, hhmmss2, tzoffset, timeregex, wordForNow, curLang string
-	var integer, pbint, val int
-
-	now := time.Now().Unix()
-
+func parseTime(s string) []string {
+	//now := time.Now().Unix()
+	
+	input := strings.Split(s, " | ")
+	return input
 }
 
 func adWordsToRegex(fillfoo byte, first int) {
 
+}
+
+func main() {
+	inp := parseTime("-mod ban @Samoxive Being hella rude | 2 days")
+	fmt.Println(inp[len(inp) - 1])
 }
 
